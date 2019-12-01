@@ -91,7 +91,7 @@ const App = () => {
               title="this code on github"
             />
           </a>
-          <span className="step-num">Step 01</span>
+          <span className="step-num">Stretch 3</span>
           <span className="title t-1">- Restaurant365</span>
           <span className="title t-2">- Code Challenge</span>
           {`
