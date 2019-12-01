@@ -1,22 +1,146 @@
-.App {
-  text-align: center;
-}
-
 .App-logo {
-  height: 40vmin;
+  height: 5vmin;
 }
 
 .App-header {
   background-color: #282c34;
+  background: #35383e;
   min-height: 100vh;
   display: flex;
   flex-direction: column;
   align-items: center;
-  justify-content: center;
-  font-size: calc(10px + 2vmin);
+  font-size: calc(1px + 2vmin);
   color: white;
 }
 
 .App-link {
   color: #09d3ac;
+}
+
+pre {
+  color: #ccc;
+}
+
+.step-num {
+  color: #09d3ac;
+  font-weight: bold;
+  font-size: 1.8rem;
+  vertical-align: super;
+  margin: 0 14px;
+}
+
+.title {
+  color: #f34b3f;
+  font-weight: bold;
+  font-size: 1.9rem;
+  vertical-align: super;
+  margin: 0 10px;
+}
+.t-1 {
+  color: #f34b3f;
+}
+.t-2 {
+  color: #a044c0;
+}
+
+.terminal {
+  background: #333;
+  border-radius: 4px;
+  border: 0 solid #333;
+  border-width: 40px 0 0 4px;
+  font-family: Fira Code, monospace;
+  height: 340px;
+  width: 829px;
+}
+
+.terminal:before {
+  background-color: #fc2230;
+  border-radius: 50%;
+  box-shadow: 0 0 0 2px #fc2230, 1.5em 0 0 2px #fd9332, 3em 0 0 2px #7cc74c;
+  content: '';
+  display: block;
+  height: 7px;
+  left: 10px;
+  position: relative;
+  top: -1.25em;
+  width: 7px;
+}
+
+.terminal input {
+  height: 40px;
+  width: 100%;
+  font-size: 1.2rem;
+  background: none;
+  border: none;
+  outline: none;
+  color: transparent;
+  text-shadow: 0px 0px 1px #bbb;
+  font-family: Fira Code, monospace;
+  margin-left: 20px;
+}
+
+.result {
+  font-size: 1.2rem;
+  font-family: Fira Code, monospace;
+  border-width: 2px 0 2px 0;
+  border-style: dashed;
+  border-color: #555;
+  padding: 6px 12px;
+  background: #3f3f3f;
+  width: 95%;
+  margin: 8px auto;
+}
+
+.result .command {
+  color: #7cc74c;
+  border-left-width: 2px;
+  margin-left: 10px;
+}
+.result .pointer {
+  color: #bbb;
+}
+.result .equation {
+  color: #fd9332;
+  border-right-width: 2px;
+}
+
+.cursor {
+  position: relative;
+  margin: 0 0 16px 10px;
+}
+
+.cursor:before {
+  content: '>';
+  position: absolute;
+  top: 6px;
+  color: #888;
+  font-weight: bolder;
+  font-size: 1.5rem;
+}
+
+.cursor i {
+  position: absolute;
+  width: 12px;
+  height: 70%;
+  background-color: #666;
+  left: 0;
+  top: 16%;
+  margin-left: 20px;
+  animation-name: blink;
+  animation-duration: 1100ms;
+  animation-iteration-count: infinite;
+  opacity: 1;
+}
+
+/* .cursor input:focus + i {
+  display: none;
+} */
+
+@keyframes blink {
+  from {
+    opacity: 1;
+  }
+  to {
+    opacity: 0;
+  }
 }
